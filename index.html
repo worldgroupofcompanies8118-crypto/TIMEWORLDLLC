@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,6 +23,7 @@
     }
 
     html{scroll-behavior:smooth;}
+
     body{
       font-family:'Jost',sans-serif;
       background:var(--ink);
@@ -66,6 +68,7 @@
       color:var(--gold)!important;
     }
 
+    /* HERO - DESKTOP */
     .hero{
       min-height:100vh;
       min-height:100dvh;
@@ -75,7 +78,7 @@
       overflow:hidden;
       background:
         linear-gradient(90deg, rgba(8,8,8,.94) 0%, rgba(8,8,8,.82) 40%, rgba(8,8,8,.45) 100%),
-        url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1795075127646-3efe423e6ecb?q=80&w=1030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') center center / cover no-repeat;
     }
 
     .hero::after{
@@ -255,10 +258,10 @@
     }
 
     .contact-card{
-  background:#ffffff !important;
-  border:1px solid #e5e5e5 !important;
-  padding:2rem;
-  border-radius:4px;
+      background:#ffffff !important;
+      border:1px solid #e5e5e5 !important;
+      padding:2rem;
+      border-radius:4px;
     }
 
     #hubspotFormWrapper{
@@ -272,6 +275,86 @@
       display:block !important;
     }
 
+    /* GOOGLE REVIEWS */
+    .review-section{
+      background:var(--surface);
+      padding:5rem 0;
+      text-align:center;
+    }
+
+    .review-card{
+      max-width:700px;
+      margin:auto;
+      padding:2.8rem 2.2rem;
+      background:var(--card);
+      border:1px solid var(--border-gold);
+    }
+
+    .review-stars{
+      color:var(--gold);
+      font-size:1.9rem;
+      letter-spacing:.3em;
+      margin-bottom:1rem;
+    }
+
+    .review-card h2{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2rem,4vw,2.5rem);
+      color:var(--platinum);
+      margin-bottom:1rem;
+    }
+
+    .review-card p{
+      color:#a7a7a2;
+      line-height:1.9;
+      font-weight:300;
+      margin-bottom:1.6rem;
+    }
+
+    .review-card select{
+      width:100%;
+      padding:1rem;
+      border:1px solid var(--border-gold);
+      background:#141414;
+      color:var(--platinum);
+      font-family:'Jost',sans-serif;
+      margin-bottom:1.1rem;
+      outline:none;
+      border-radius:0;
+    }
+
+    .review-card select:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 .15rem rgba(184,151,90,.15);
+    }
+
+    .review-btn{
+      display:block;
+      width:100%;
+      background:var(--gold);
+      color:var(--ink);
+      padding:1rem;
+      border:1px solid var(--gold);
+      text-decoration:none;
+      transition:.25s ease;
+      cursor:pointer;
+      font-family:'Jost',sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:500;
+    }
+
+    .review-btn:hover{
+      background:transparent;
+      color:var(--gold);
+    }
+
+    @media(max-width:576px){
+      .review-card{
+        padding:2.2rem 1.2rem;
+      }
+    }
+
     footer{
       border-top:1px solid var(--border);
       background:#060606;
@@ -280,12 +363,13 @@
       font-size:.85rem;
     }
 
+    /* HERO - MOBILE */
     @media (max-width: 991px){
       .hero{
         text-align:center;
         background:
           linear-gradient(180deg, rgba(8,8,8,.84) 0%, rgba(8,8,8,.9) 100%),
-          url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+          url('https://images.unsplash.com/photo-1795075127646-3efe423e6ecb?q=80&w=1030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') center center / cover no-repeat;
       }
 
       .hero p.lead{
@@ -366,7 +450,7 @@
             </p>
 
             <div class="mt-4">
-              <a href="#about" class="btn btn-gold me-2">Know Us</a>
+              <a href="#about" class="btn btn-gold me-2">About Us</a>
               <a href="#contact" class="btn btn-outline-gold">Join Our Broadcast</a>
             </div>
           </div>
@@ -442,6 +526,46 @@
       </div>
     </section>
 
+    <!-- GOOGLE REVIEWS -->
+    <section class="review-section" id="reviews">
+      <div class="container">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Five stars">★★★★★</div>
+          <div class="section-kicker">Customer Experience</div>
+          <h2>Share Your Experience</h2>
+          <p>
+            Thank you for choosing Time World.
+            Select the branch you visited and share your experience with us on Google.
+          </p>
+
+          <label class="visually-hidden" for="branchSelect">Select your Time World branch</label>
+          <select id="branchSelect">
+            <option value="">Select Your Branch</option>
+            <option value="0">UB Level Al Wahda Mall - Abu Dhabi</option>
+            <option value="1">First Floor Lulu Hyper Market, Al Qusais - Dubai</option>
+            <option value="2">First Floor Lulu Hyper Market, Al Barsha 1 - Dubai</option>
+            <option value="3">Ground Floor Lulu Hyper Market, Al Barsha 1 - Dubai</option>
+            <option value="4">Ground Floor Lulu Hyper Market, DIP 1 - Dubai</option>
+            <option value="5">Ground Floor Nesto Hyper Market, Abushagra - Sharjah</option>
+            <option value="6">Ground Floor Nesto Hyper Market, King Faisal - Sharjah</option>
+            <option value="7">Ground Floor Lulu Hyper Market, Al Nahda - Sharjah</option>
+            <option value="8">First Floor Nesto Hyper Market, Rolla - Sharjah</option>
+            <option value="9">First Floor Mushriff Nesto, Al Rashidiya 1 - Ajman</option>
+            <option value="10">Ground Floor Main Entrance Mushriff Nesto, Al Rashidiya 1 - Ajman</option>
+            <option value="11">Ground Floor Foodbook Entrance Mushriff Nesto, Al Rashidiya 1 - Ajman</option>
+            <option value="12">Ground Floor Fakhrudhin Mall Nesto Hyper Market, Al Rumailah 1 - Ajman</option>
+            <option value="13">Ground Floor Fakhrudhin Mall Nesto Hyper Market, Al Rumailah 1 - Ajman (Second Listing)</option>
+            <option value="14">Ground Floor RAK Mall, Al Qurum - Ras Al Khaimah</option>
+          </select>
+
+          <button class="review-btn" type="button" onclick="goToReview()">
+            Leave a Google Review
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- END GOOGLE REVIEWS -->
+
     <!-- SOCIAL -->
     <section class="section-surface" id="social">
       <div class="container">
@@ -460,7 +584,6 @@
           <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://wa.me/971525048397" target="_blank"><div class="social-icon">WA</div><div>WhatsApp</div></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://youtube.com/@WorldGroupOfCompanies-uae" target="_blank"><div class="social-icon">YT</div><div>YouTube</div></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://snapchat.com/add/timeworld_ae" target="_blank"><div class="social-icon">SC</div><div>Snapchat</div></a></div>
-          
         </div>
       </div>
     </section>
@@ -506,6 +629,7 @@
 
   <script>
     const nav = document.querySelector('.navbar');
+
     window.addEventListener('scroll', function(){
       if(window.scrollY > 40){
         nav.classList.add('shadow');
@@ -514,5 +638,44 @@
       }
     });
   </script>
+
+  <script>
+    // Google Review links for all 15 Time World branch listings
+    const timeWorldReviewLinks = [
+      "https://g.page/r/CTIDx1KrpkrUEBM/review",
+      "https://g.page/r/CWJEn43gGGnBEBM/review",
+      "https://g.page/r/CeVETiCX-1JTEBM/review",
+      "https://g.page/r/CeVETiCX-1JTEBM/review",
+      "https://g.page/r/CWzllvk0OEnrEBM/review",
+      "https://g.page/r/CUMQfbplXDNzEBM/review",
+      "https://g.page/r/CRuc8gyqCFoEEBM/review",
+      "https://g.page/r/CRCa59aIl9hrEBM/review",
+      "https://g.page/r/CWEHqKRRo0skEBM/review",
+      "https://g.page/r/CUajWidiDx0JEBM/review",
+      "https://g.page/r/CUajWidiDx0JEBM/review",
+      "https://g.page/r/CUajWidiDx0JEBM/review",
+      "https://g.page/r/CSVQ_CTxqABoEBM/review",
+      "https://g.page/r/CSVQ_CTxqABoEBM/review",
+      "https://g.page/r/CRJzGXPFb6PdEBM/review"
+    ];
+
+    function goToReview() {
+      const branchSelect = document.getElementById("branchSelect");
+      const selectedIndex = branchSelect.value;
+
+      if (selectedIndex === "") {
+        alert("Please select the branch you visited.");
+        branchSelect.focus();
+        return;
+      }
+
+      const reviewUrl = timeWorldReviewLinks[Number(selectedIndex)];
+
+      if (reviewUrl) {
+        window.open(reviewUrl, "_blank", "noopener,noreferrer");
+      }
+    }
+  </script>
+
 </body>
 </html>
