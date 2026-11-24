@@ -526,46 +526,6 @@
       </div>
     </section>
 
-    <!-- GOOGLE REVIEWS -->
-    <section class="review-section" id="reviews">
-      <div class="container">
-        <div class="review-card">
-          <div class="review-stars" aria-label="Five stars">★★★★★</div>
-          <div class="section-kicker">Customer Experience</div>
-          <h2>Share Your Experience</h2>
-          <p>
-            Thank you for choosing Time World.
-            Select the branch you visited and share your experience with us on Google.
-          </p>
-
-          <label class="visually-hidden" for="branchSelect">Select your Time World branch</label>
-          <select id="branchSelect">
-            <option value="">Select Your Branch</option>
-            <option value="0">UB Level Al Wahda Mall - Abu Dhabi</option>
-            <option value="1">First Floor Lulu Hyper Market, Al Qusais - Dubai</option>
-            <option value="2">First Floor Lulu Hyper Market, Al Barsha 1 - Dubai</option>
-            <option value="3">Ground Floor Lulu Hyper Market, Al Barsha 1 - Dubai</option>
-            <option value="4">Ground Floor Lulu Hyper Market, DIP 1 - Dubai</option>
-            <option value="5">Ground Floor Nesto Hyper Market, Abushagra - Sharjah</option>
-            <option value="6">Ground Floor Nesto Hyper Market, King Faisal - Sharjah</option>
-            <option value="7">Ground Floor Lulu Hyper Market, Al Nahda - Sharjah</option>
-            <option value="8">First Floor Nesto Hyper Market, Rolla - Sharjah</option>
-            <option value="9">First Floor Mushriff Nesto, Al Rashidiya 1 - Ajman</option>
-            <option value="10">Ground Floor Main Entrance Mushriff Nesto, Al Rashidiya 1 - Ajman</option>
-            <option value="11">Ground Floor Foodbook Entrance Mushriff Nesto, Al Rashidiya 1 - Ajman</option>
-            <option value="12">Ground Floor Fakhrudhin Mall Nesto Hyper Market, Al Rumailah 1 - Ajman</option>
-            <option value="13">Ground Floor Fakhrudhin Mall Nesto Hyper Market, Al Rumailah 1 - Ajman (Second Listing)</option>
-            <option value="14">Ground Floor RAK Mall, Al Qurum - Ras Al Khaimah</option>
-          </select>
-
-          <button class="review-btn" type="button" onclick="goToReview()">
-            Leave a Google Review
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- END GOOGLE REVIEWS -->
-
     <!-- SOCIAL -->
     <section class="section-surface" id="social">
       <div class="container">
@@ -621,7 +581,7 @@
       <div style="font-family:'Playfair Display',serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;">
         Time World
       </div>
-      <div>Stores All Across UAE · +971 52 504 8397 · © 2025 Time World</div>
+      <div>Stores All Across UAE · +971 56 731 4321 · © 2025 Time World</div>
     </div>
   </footer>
 
@@ -638,44 +598,5 @@
       }
     });
   </script>
-
-  <script>
-    // Google Review links for all 15 Time World branch listings
-    const timeWorldReviewLinks = [
-      "https://g.page/r/CTIDx1KrpkrUEBM/review",
-      "https://g.page/r/CWJEn43gGGnBEBM/review",
-      "https://g.page/r/CeVETiCX-1JTEBM/review",
-      "https://g.page/r/CeVETiCX-1JTEBM/review",
-      "https://g.page/r/CWzllvk0OEnrEBM/review",
-      "https://g.page/r/CUMQfbplXDNzEBM/review",
-      "https://g.page/r/CRuc8gyqCFoEEBM/review",
-      "https://g.page/r/CRCa59aIl9hrEBM/review",
-      "https://g.page/r/CWEHqKRRo0skEBM/review",
-      "https://g.page/r/CUajWidiDx0JEBM/review",
-      "https://g.page/r/CUajWidiDx0JEBM/review",
-      "https://g.page/r/CUajWidiDx0JEBM/review",
-      "https://g.page/r/CSVQ_CTxqABoEBM/review",
-      "https://g.page/r/CSVQ_CTxqABoEBM/review",
-      "https://g.page/r/CRJzGXPFb6PdEBM/review"
-    ];
-
-    function goToReview() {
-      const branchSelect = document.getElementById("branchSelect");
-      const selectedIndex = branchSelect.value;
-
-      if (selectedIndex === "") {
-        alert("Please select the branch you visited.");
-        branchSelect.focus();
-        return;
-      }
-
-      const reviewUrl = timeWorldReviewLinks[Number(selectedIndex)];
-
-      if (reviewUrl) {
-        window.open(reviewUrl, "_blank", "noopener,noreferrer");
-      }
-    }
-  </script>
-
 </body>
 </html>
